@@ -5,12 +5,9 @@ def check(a, b, p):
     f = []
     f.append(0.0)
     enter = 2 + b
-    
+    backspace =finish = (b - a) + 1 + f[a]*(1 + b)
     for i in range(1, a + 1):
         f.append((1 - p[i-1]) + p[i-1] * f[i-1])
-    
-    finish = (b - a) + 1 + f[a]*(1 + b)
-    backspace = finish;
 
     for back in range(1, a+1): 
         backspace = min(backspace, back + (b - a + back) + 1 + f[a-back]*(1 + b) )
