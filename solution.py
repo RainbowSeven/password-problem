@@ -34,6 +34,10 @@ if __name__ == '__main__':
 
                     prob_strls = (file_rd[i+1]).replace('\n','').split(' ')
                     prob_fls =  [ float(k) for k in  prob_strls]
+                    # Validate parameters
+                    if filter(lambda x: x, [i for i in key_strk_fls if i > 1 or i<0 ]) :
+                        print "[!] Skipping invalid parameters"
+                        continue
                     add_keystrk = check(key_strk_fls[0],key_strk_fls[1], prob_fls)
                     out +=  "Case # %s: %s \n" %( str(case), str(add_keystrk))
                     case +=1
