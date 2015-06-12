@@ -4,10 +4,10 @@ def check(a, b, p):
 """ Check for average number of expected keystrokes"""
     f = []
     f.append(0.0)
+    enter = 2 + b
+    
     for i in range(1, a + 1):
         f.append((1 - p[i-1]) + p[i-1] * f[i-1])
-    
-    enter = 2 + b
     
     finish = (b - a) + 1 + f[a]*(1 + b)
     backspace = finish;
