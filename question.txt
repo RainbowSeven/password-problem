@@ -23,12 +23,12 @@ I typed the 'u' correctly but I made a mistake typing the 'g': "Xu". This occurs
 I made a mistake typing both letters, so I have two incorrect letters: "XX". This occurs with probability 0.4 * 0.4 = 0.16.
 I don't know how many mistakes I actually made, but for any strategy, I can calculate the expected number of keys required to use it. This is shown in the table below:
 
-"gu"    "gX"    "Xu"    "XX"    Expected
-Probability 0.36    0.24    0.24    0.16    -
-Keystrokes if I keep typing 4   10  10  10  7.84
-Keystrokes if I press backspace once    6   6   12  12  8.4
-Keystrokes if I press backspace twice   8   8   8   8   8
-Keystrokes if I press enter right away  7   7   7   7   7
+                                    "gu"    "gX"    "Xu"    "XX"    Expected
+probability                         0.36    0.24    0.24    0.16    -
+Keystrokes if I keep typing            4    10      10      10      7.84
+Keystrokes if I press backspace once   6    6       12      12      8.4
+Keystrokes if I press backspace twice  8    8       8       8       8
+Keystrokes if I press enter right away 7    7       7       7       7
 If I keep typing, then there is an 0.36 probability that I will need 4 keystrokes, and an 0.64 probability that I will need 10 keystrokes. If I repeated the trial many times, then I would use 4 keystrokes 36% of the time, and 10 keystrokes the remaining 64% of the time, so the average number of keystrokes needed would be 0.36 * 4 + 0.64 * 10 = 7.84. In this case however, it is better to just press enter right away, which requires 7 keystrokes.
 
 Input
