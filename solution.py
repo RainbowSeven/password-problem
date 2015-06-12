@@ -3,7 +3,7 @@ import time
 def check(a, b, p):
     f = []
     f.append(0.0)
-    for i in range(1, a+1):
+    for i in range(1, a):
         f.append((1 - p[i-1]) + p[i-1] * f[i-1])
     
     enter = 2 + b
