@@ -1,9 +1,10 @@
 import sys
 import time
 def check(a, b, p):
+""" Check for average number of expected keystrokes"""
     f = []
     f.append(0.0)
-    for i in range(1, a):
+    for i in range(1, a + 1):
         f.append((1 - p[i-1]) + p[i-1] * f[i-1])
     
     enter = 2 + b
