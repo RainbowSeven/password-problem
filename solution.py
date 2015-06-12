@@ -17,7 +17,7 @@ def check(a, b, p):
 
 if __name__ == '__main__':
     if len(sys.argv[1]) < 2:
-        print "Please specify an input file to run argument on"
+        print "Please specify an input file to solve"
     else:
         with open(sys.argv[1], 'r') as my_file:
             lines = sum(1 for line in my_file)
